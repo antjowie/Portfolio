@@ -55,16 +55,16 @@ disqusShortname = "https-angelo-netlify-com"
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
   [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/antjowie27"
-
-#   [[params.social]]
-#     name = "instagram"
-#     url = "https://instagram.com/"
-
-  [[params.social]]
     name = "github"
     url = "https://github.com/antjowie"
+
+  [[params.social]]
+    name = "email"
+    url = "mailto:angelo05rettob@gmail.com"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/antjowie27"
 
 [menu]
 
