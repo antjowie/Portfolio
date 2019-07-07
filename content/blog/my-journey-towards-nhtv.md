@@ -8,6 +8,8 @@ bigimg:
     - {src: "/img/my-journey-towards-nhtv/NHTV_Breda_logo.jpg", desc: "The old NHTV logo"}
     - {src: "https://hwrk.nl/wp-content/uploads/2014/09/BredaUniversaity.jpg", desc: "The new Breda University logo"}
 ---
+> This content is imported from my old site. The formatting and style may differ greatly from the other content.
+
 I've met many people who don't know what to do with their lives. It is a hard question at such a young age: What do you want to become when you get older? You're just starting to get more independent and you already have to make a decision that will shape your future.  
 <!--more-->
 
@@ -35,7 +37,7 @@ The PS4 came with a certain deal. Because it was quite expansive, I have made th
 
 I played FIFA and enjoyed it while it lasted. After I had won division one on ultimate team I was done with the game, and started playing Destiny, my addiction for the next few years.
 
-> I'm not gonna talk about Destiny here, but I will say one thing. I absolutely loved Destiny's gameplay, especially the end game activities. I't really pains me too see the game go downhill so badly. I gave it so many chances, I even pre-ordered the Destiny 2 package. I really wanted it to become a great thing, but the content just became to dry. I just couldn't support the developers that released such a package. Hopefully someone will make a game with all the great of Destiny. And if that doesn't happen in the next few years, maybe I'll try something out. 
+> I'm not gonna talk about Destiny here, but I will say one thing. I absolutely loved Destiny's gameplay, especially the end game activities. It really pains me too see the game go downhill so badly. I gave it so many chances, I even pre-ordered the Destiny 2 package. I really wanted it to become a great thing, but the content just became to dry. I just couldn't support the developers that released such a package. Hopefully someone will make a game with all the great of Destiny. And if that doesn't happen in the next few years, maybe I'll try something out. 
 
 It wasn't only my addicition, it also became my dads addiction. We almost bought a second PS4 because of it, but my mother didn't like that idea. So I resisted.  
 But one night my dad was playing with a few randoms. Also parents by the way. And one of them started talking about their son on how they got into this school with some slim chances to get in. During that time I was considering if a programming school really is worth it, what is it that they teach me that I can't learn online?  

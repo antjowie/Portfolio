@@ -5,7 +5,7 @@ subtitle: "My first game, that was not suppposed to be a game"
 tags: 
   - cpp
   - sfml
-  - game-development
+  - game development
 images: 
   - /img/projects/runaway/Light-test-1.png
   - /img/projects/runaway/Ligth-example.png
