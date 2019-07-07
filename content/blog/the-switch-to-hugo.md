@@ -49,7 +49,7 @@ As a programmer or somebody who just uses the computer extensively, I still felt
 
 This all changed when I started to try out `Python`. I was busy with my engine [Axios (link to be implemented)]() and searched for a bit of information in my book [Game Engine Architecture](http://gameenginebook.com/). The objects in my engine are component based, almost the same as in [Unity](https://unity3d.com/). I was reading about it around the last chapter. I read that some engines use a scripting language to model the components of the objects. Even `Python` was used. I always had my eye on `Python`. Not only because it is a [very famous language](https://stackify.com/popular-programming-languages-2018/) but also because people seemed to really like their `Python`.  It does everything for them and everything just makes sense.
 
-{{< figure src="http://stackify.com/wp-content/uploads/2017/12/top-programming-languages-1.png" 
+{{< figure src="https://stackify.com/wp-content/uploads/2017/12/top-programming-languages-1.png" 
 alt="Programming languages popularity chart" 
 caption="Programming languages popularity chart 2018 from Stackify" >}}
 
