@@ -14,8 +14,10 @@ comments: false
 ---
 
 Runaway is my attempt to make a simple 2D game which features a basic move set. My main reason for making this game is to see how far I&#8217;ve gotten with my programming skills.
-<!--more-->
- I&#8217;m making this game before reading the book <a href="http://www.gameenginebook.com/" target="_blank" rel="noopener">Game Engine Architecture</a>. After I&#8217;ve finished this game, I will read the book. This way, I&#8217;ll see how much my programming skills have improved after reading the book. It seemed like an interesting thing to compare, my skill before and after reading. The most important thing to remember about this project is that game design was not taken into consideration while working on this project. The only reason as for why I started this project, is to get a rough idea of my skill set and understanding of 2D game programming.
+
+[Click here to see all the posts]({{< ref "runaway-post/" >}})
+
+I&#8217;m making this game before reading the book <a href="http://www.gameenginebook.com/" target="_blank" rel="noopener">Game Engine Architecture</a>.After I&#8217;ve finished this game, I will read the book. This way, I&#8217;ll see how much my programming skills have improved after reading the book. Itseemed like an interesting thing to compare, my skill before and after reading. The most important thing to remember about this project is that game designwas not taken into consideration while working on this project. The only reason as for why I started this project, is to get a rough idea of my skill setand understanding of 2D game programming.
 
 The GitHub link for this project can be found [here][1].
 

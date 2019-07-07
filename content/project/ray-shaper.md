@@ -11,6 +11,9 @@ images:
 - "/img/projects/ray-shaper/splashscreen.png"
 commets: false
 ---
+
+[Click here to see all the posts]({{< ref "ray-shaper-post/" >}})
+
 When I was 13 I first heard about NHTV. I was in second grade and already started looking for a school to enter. Back then I was quite scared of the future. I realized the importance of the decisions we have to make right now and was afraid that I would choose something that wouldn&#8217;t satisfy me. I don&#8217;t feel that way anymore. I make sure that every decision that I make right now regarding my future will be the correct one. If I always try my hardest there is no way I could regret my chooses. By doing that I should always end where I was meant to be.
 
 Right now, I think that place is at NHTV. I take programming quite seriously. I do not see programming as just a hobby, I see it as a way to live. Kinda like how an artist lives his live drawing, I want to live my life creating worlds in programs. When I visited NHTV on their open day, I instantly felt it click. I could already feel myself at home. I especially liked talking to other people about programming, something I should be doing way more. My motivation to program only grew.

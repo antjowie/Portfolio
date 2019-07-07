@@ -12,7 +12,8 @@ bigimg:
 comments: false
 ---
 The Axios Framework makes use of [SFML](https://www.sfml-dev.org/). The Axios Framework is a 2D game framework that runs on files made by [Tiled](https://www.mapeditor.org/). The programmer only writes the objects. The objects are exported to a file that can be loaded in [Tiled](https://www.mapeditor.org/), a 2D tilemap editor. At first, I wanted to make a game engine, but I have no experience making any kind of GUI yet. I believe that you should not do two major new subjects at the same time, so a framework it is. Hopefully, this project can one day evolve into a game engine.
-<!--more-->
+
+[Click here to see all the posts]({{< ref "axios-framework-post/" >}})
 
 ## My motivation for this project
 The framework is supposed to be an all inclusive pack. During the development of my two first games [Runaway](https://github.com/antjowie/Runaway) and [Ray Shaper](https://github.com/antjowie/Ray-Shaper), I noticed a certain pattern. Time was crucial (Ray Shaper was my intake assignment for Breda University, [read more about that here]({{< ref "/blog/my-journey-towards-nhtv.md" >}})) so I copied and pasted much of the code from Runaway. Many of those files were modified to meet certain needs, but the animation files and the game loop stayed the same.  
