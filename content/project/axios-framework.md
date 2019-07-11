@@ -3,10 +3,9 @@ title: "Axios Framework"
 date: 2018-06-16T13:53:09+02:00
 subtitle: "The framework that powers all of my 2D games"
 tags: 
-    - game development
     - framework
     - cpp
-    - sfml
+    - personal project
 bigimg: 
     # - {src: "path", desc: "description"}
 comments: false

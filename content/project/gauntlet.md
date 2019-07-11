@@ -8,8 +8,8 @@ images:
 - https://github.com/antjowie/Gauntlet/blob/master/docs/splash.png?raw=true
 tags: 
   - cpp
-  - school
   - game
+  - school project 
 ---
 
 [![game showcase](https://github.com/antjowie/Gauntlet/blob/master/docs/splash.png?raw=true)](https://github.com/antjowie/Gauntlet/blob/master/docs/game.gif) 

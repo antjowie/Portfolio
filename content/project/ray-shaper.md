@@ -5,9 +5,8 @@ author: Angelo Anthony Rettob
 date: 2018-01-09T14:49:59+00:00
 tags: 
     - cpp
-    - game development
+    - game
     - intake project
-    - sfml
 images: 
 - "/img/projects/ray-shaper/splashscreen.png"
 commets: false

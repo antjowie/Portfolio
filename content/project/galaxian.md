@@ -8,8 +8,8 @@ images:
 - https://github.com/antjowie/Galaxian/blob/master/resources/docs/splash.png?raw=true
 tags: 
   - cpp
-  - school
   - game
+  - school project
 ---
 ![game showcase](https://github.com/antjowie/Galaxian/blob/master/resources/docs/game.gif?raw=true)  
 This is my attempt at recreating the classic arcade game Galaxian in C++. This was a school project. The framework that manages graphics and input is supplied by the school.

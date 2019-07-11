@@ -3,7 +3,7 @@ title: "My Journey Towards NHTV"
 date: 2018-04-11T22:45:12+02:00
 subtitle: "How one night changed my 'Destiny'"
 tags: 
-    - university
+    - school
 bigimg: 
     - {src: "/img/my-journey-towards-nhtv/NHTV_Breda_logo.jpg", desc: "The old NHTV logo"}
     - {src: "https://hwrk.nl/wp-content/uploads/2014/09/BredaUniversaity.jpg", desc: "The new Breda University logo"}

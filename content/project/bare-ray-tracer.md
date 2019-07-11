@@ -8,8 +8,8 @@ images:
 - https://github.com/antjowie/Bare-Ray-Tracer/blob/master/docs/splash.png?raw=true
 tags: 
   - cpp
-  - school
   - graphics
+  - school project
 ---
 ![splash](https://github.com/antjowie/Bare-Ray-Tracer/blob/master/docs/splash.png?raw=true)
 A simple ray tracer written in C++ to learn basic graphics related concepts.
