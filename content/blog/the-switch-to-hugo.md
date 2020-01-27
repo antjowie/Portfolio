@@ -9,7 +9,7 @@ bigimg:
 ---
 > This content is imported from my old site. The formatting and style may differ greatly from the other content.
 
-I used to have another portfolio site I made in preparation to enter the course [Creative Media and Game Technologies](https://www.nhtv.nl/bachelors/creative-media-and-game-technologies/introduction.html) at [NHTV](https://www.nhtv.nl/). [`(I actually got a place in the course, read more about it here)`]({{< ref "blog/my-journey-towards-nhtv.md" >}}). By doing so I hoped to increase my chances during the conversation.
+I used to have another portfolio site I made in preparation to enter the course [Creative Media and Game Technologies](https://www.nhtv.nl/bachelors/creative-media-and-game-technologies/introduction.html) at [NHTV](https://www.nhtv.nl/). By doing so I hoped to increase my chances during the conversation.
 
 > NHTV will be renamed to Breda University of Applied Sciences as of September 2018
 
