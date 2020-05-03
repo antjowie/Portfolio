@@ -1,4 +1,4 @@
-baseURL = "https://angelo.netlify.com"
+baseURL = "https://angelo.netlify.app"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Angelo's portfolio"
