@@ -98,7 +98,7 @@ th {
 
 .intro {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width-small), 1fr));
     grid-gap: 2.5rem;
     padding: 2rem;
 }
