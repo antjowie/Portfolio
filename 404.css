@@ -6,6 +6,31 @@ body {
     )
 }
 
+a {
+    color: white;
+    display: inline-block;
+    position: relative;
+    /* border-bottom: 2px solid var(--highlight); */
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    bottom: 0;
+    background-color: var(--highlight);
+    width: 110%;
+    height: 2px;
+    /* transform: scaleX(0); */
+    transform-origin: left;
+    transition: all 650ms;
+    z-index:-10;
+}
+
+a:hover::before {
+    height: 95%;
+}
+
 .title-heading {
     position: absolute;
     left: 50%;
