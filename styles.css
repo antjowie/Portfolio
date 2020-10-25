@@ -360,7 +360,7 @@ nav {
             var(--gradient-1) 0%,
             var(--gradient-2) 100%
         ),
-        url("res/template/testimonials-bg.jpg") center no-repeat;
+        url("res/about-me.jpg") center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
