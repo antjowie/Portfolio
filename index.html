@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angelo's portfolio</title>
+    <link rel="icon" type="image/png" href="res/icon.png">
+    <!--Ion Icons-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <!--Our own stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Shout out to Julio Codes for his amazing tutorial-->
+    <!-- https://www.youtube.com/channel/UCeHWTyAKBv_WnW8gsEKGECw -->
+    <!-- Referenced video https://www.youtube.com/watch?v=j_Xa7Kn59Es -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="res/icon.png" alt="">
+                    </a>
+                </div>
+
+                <div class="menu-icons open">
+                    <i class="icon ion-md-menu"></i>
+                </div>
+
+                <ul class="nav-list">
+                    <div class="menu-icons close">
+                        <i class="icon ion-md-close"></i>
+                    </div>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link current">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Projects</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#about-me" class="nav-link">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="main-message">
+                    <h3 data-aos="fade-right" data-aos-delay="1000">8 weeks - 16 students - gameplay developer</h3>
+                    <h1 data-aos="fade-right" data-aos-delay="1600">Temple of Giants</h1>
+                    <p data-aos="fade-right" data-aos-delay="2400">
+                        A third-person puzzle-platformer set in Ancient Greece
+                    </p>
+                    <div class="cta" data-aos="fade-right" data-aos-delay="2400">
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <video playsinline autoplay muted loop poster="res/projects/2020/tog/title.png">
+                <source src="res/projects/2020/tog/trailer.m4v" type="video/mp4">
+            </video>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <!-- Professional projects -->
+                <div class="title-heading" data-aos="fade-up">
+                    <h3>Take a look at</h3>
+                    <h1>Professional project's I've worked on</h1>
+                    <p>Projects made in collaboration with others</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- <div data-aos="fade-up" class="projects-grid-item shoot">
+                        <div class="projects-grid-heading">
+                            <h1>Shoot</h1>
+                            <h3>2020 - 32 weeks - 23 students - network developer - BUas Y3 project</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>A first person co-op base defense horde shooter</p>
+
+                            <br>
+                        </div>
+                    </div> -->
+
+                    <div class="projects-grid-item tog" data-aos="fade-up">
+                        <div class="background"></div>
+
+                        <!-- <i class="icon ion-md-star"></i> -->
+                        <div class="projects-grid-heading">
+                            <h1>Temple of Giants</h1>
+                            <h3>2020 - 8 weeks - 16 students - gameplay developer - BUas Y2D project</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>Temple of Giants is a third-person puzzle-platformer set in Ancient greece</p>
+
+                            <br>
+                            <ul>
+                                <p>Awards:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Art Year 2 (Won)</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Design Year 2 (Runner
+                                        up)</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Game Year 2 Teacher's
+                                        Pick (Won)</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Game Year 2 Audience
+                                        Pick (Won)</p>
+                                </li>
+                            </ul>
+
+                            <br>
+                            <ul>
+                                <p>My contributions:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Implemented player abilities
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Implemented the saving and
+                                        checkpoint system</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Implemented controller
+                                        support (UI changes dynamically based on input)</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> In game feedback system that
+                                        forwards feedback to our Discord (or any webhook)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal projects -->
+                <div class="title-heading personal" data-aos="fade-up">
+                    <h3>Take a look at</h3>
+                    <h1>Personal project's I've worked on</h1>
+                    <p>Mostly side- or educational projects</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="projects-grid-item ray-tracer" data-aos="fade-up">
+                        <div class="background"></div>
+
+                        <!-- <i class="icon ion-md-star"></i> -->
+                        <div class="projects-grid-heading">
+                            <h1>Ray Tracer</h1>
+                            <h3>2020 - 2 weeks - workshop by Jacco Bikker</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>This CPU ray tracer is the product of a 2 week Masterclass given by Jacco Bikker</p>
+
+                            <br>
+                            <ul>
+                                <p>Features:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> 14 triangles with a
+                                        resolution of 512x512 runs at 130 fps</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Ray and path tracer branch
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Multi-threaded</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> AA support</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Path tracer has soft shadows
+                                        and DOF</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="projects-grid-item empires" data-aos="fade-up">
+                        <div class="background"></div>
+
+                        <div class="projects-grid-heading">
+                            <h1>Empires</h1>
+                            <h3>2018 - 8 weeks - BUas Y2B project</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>A RTS game in which you have to colonize the entire galaxy, made for the Raspberry PI</p>
+
+                            <br>
+                            <ul>
+                                <p>Features:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Random generated galaxy</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> 3D camera to freely navigate
+                                        the world with a minimap</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Different vessel types with
+                                        different behaviors (colonizers, fighters, merchants and carriers)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="projects-grid-item gauntlet" data-aos="fade-up">
+                        <div class="background"></div>
+
+                        <div class="projects-grid-heading">
+                            <h1>Gauntlet</h1>
+                            <h3>2018 - 3 weeks - BUas Y1A project</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>A recreation of the original Gauntlet arcade game</p>
+
+                            <br>
+                            <ul>
+                                <p>Features:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Different kinds of enemies
+                                        with different attack behaviors</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Functioning game loop with
+                                        score system</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Multiple levels, created
+                                        using Tiled</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Achievements system</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="projects-grid-item galaxians" data-aos="fade-up">
+                        <div class="background"></div>
+
+                        <div class="projects-grid-heading">
+                            <h1>Galaxians</h1>
+                            <h3>2018 - 3 weeks - BUas Y1A project</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>A recreation of the original Galaxians arcade game</p>
+
+                            <br>
+                            <ul>
+                                <p>Features:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Arcade main screen, showing
+                                        gameplay until you press enter</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Functioning unlimited game
+                                        loop with high score system and lives</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Enemy formation attacks with
+                                        curves</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="projects-grid-item ray-shaper" data-aos="fade-up">
+                        <div class="background"></div>
+
+                        <div class="projects-grid-heading">
+                            <h1>Ray Shaper</h1>
+                            <h3>2018 - 3 weeks - BUas intake project</h3>
+                        </div>
+
+                        <div class="projects-grid-text">
+                            <p>Ray shaper is a puzzle game in which you reflect lasers to open the gate</p>
+
+                            <br>
+                            <ul>
+                                <p>Features:</p>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Puzzles based around moving
+                                        reflectors and reflecting light in all directions</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Tiled importer to create the
+                                        map</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Progress is saved</p>
+                                </li>
+                                <li>
+                                    <p><i class="icon ion-md-checkmark-circle-outline"></i> Options menu, configurable
+                                        key bindings and audio</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <div class="container" id="about-me">
+                <div class="about">
+                    <div class="about-text-box" data-aos="fade-up" data-aos-offset="-150">
+                        <h3>Game developer</h3>
+                        <h1>Angelo Anthony Rettob</h1>
+                        <p>Hi, I'm Angelo, a programmer with a passion for games. I started programming around the age
+                            of 16 and am currently studying <b>International Game Architecture & Design (IGAD)</b> at
+                            <b>Breda University of Applied Sciences (BUas)</b>.
+                        </p>
+                        <!-- <p>I've been playing games since my childhood. I've always been fascinated how these worlds existed in my little PSP. I want to know how these games are created so that I can craft the experiences that have shaped me into who I am today.</p>  -->
+                        <p>At BUas, I've learned that peers value me for my <b>expertise</b> and <b>initiative</b>. When
+                            my attention
+                            is required, I'm <b>quick to respond</b>. I actively contribute to meetings, alerting the
+                            team of
+                            potential risks.
+                        </p>
+                        
+                        <!-- Socials -->
+                        <div data-aos="fade-up">
+                            <a class="btn" href="mailto:angelo05rettob@gmail.com"><i class="ion-md-mail"></i></a>
+                            <a class="btn" href="https://github.com/antjowie" target="_blank"><i class="ion-logo-github"></i></a>
+                            <a class="btn" href="https://twitter.com/antjowie" target="_blank"><i class="ion-logo-twitter"></i></a>
+                        </div>
+        
+                        <!-- <i class="icon ion-md-quote"></i> -->
+                    </div>
+                    <div class="about-image" data-aos="fade-up" data-aos-anchor=".about-text-box"
+                        data-aos-offset="-150">
+                        <img src="res/icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="container">
+                <div class="title-heading" data-aos="fade-up">
+                    <h3>My experiences with...</h3>
+                    <h1>Languages</h1>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/lang/cpp.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/lang/cs.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/lang/js.png" alt="">
+                    </div>
+                </div>
+
+                <div class="title-heading" data-aos="fade-up">
+                    <h3>My experiences with...</h3>
+                    <h1>technologies</h1>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/vs.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/vscode.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/cmake.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/git.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/perforce.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/unity.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/ue.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/blender.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/jenkins.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/jira.png" alt="">
+                    </div>
+                    <div class="skill-grid-item" data-aos="fade-up">
+                        <img src="res/skills/tech/premiere.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="go-back" data-aos="fade-up">
+                    <a class="btn" href="#" alt="Go back up">
+                        <i class="ion-md-arrow-round-up"></i>
+                    </a>
+                </div>
+                <!-- <a class="btn" href="#" data-aos="fade-up">
+                    Go back up <i class="ion-md-arrow-dropup"></i>
+                </a> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2020 Angelo Anthony Rettob.</p>
+    </footer>
+
+    <script type="text/javascript" src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                once: true,
+                easing: 'ease-in-out',
+                duration: 650
+            });
+    </script>
+</body>
+
+</html>

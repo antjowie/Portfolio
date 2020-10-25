@@ -1,0 +1,30 @@
+/* This is where I specify the background for each project card */
+
+/* Professional projects */
+.shoot > .background {
+    background: url("res/template/camping.jpg");
+}
+
+.tog > .background {
+    background: url("res/projects/2020/tog/title.png");
+}
+
+.ray-tracer > .background {
+    background: url("res/projects/2020/ray-tracer/title.png");
+}
+
+.empires > .background {
+    background: url("res/projects/2019/empires/title.png");
+}
+
+.gauntlet > .background {
+    background: url("res/projects/2018/gauntlet/title.png");
+}
+
+.galaxians > .background {
+    background: url("res/projects/2018/galaxians/title.png");
+}
+
+.ray-shaper > .background {
+    background: url("res/projects/2018/ray-shaper/title.png");
+}
