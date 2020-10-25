@@ -56,9 +56,10 @@ body {
     z-index: -5;
 }
 
-.container > * {
+.container > *:not(:first-child) {
     padding: 2rem;
 }
+
 
 /* Project description */
 /* https://embedresponsively.com/ */
