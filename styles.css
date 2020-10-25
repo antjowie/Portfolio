@@ -25,6 +25,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-size: 1.6rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -33,9 +37,10 @@ ul {
     list-style: none;
 }
 
-p {
+/* p,
+li {
     font-size: 1.6rem;
-}
+} */
 
 p a {
     color: white;
@@ -304,7 +309,7 @@ nav {
     display: flex;
     flex-direction: column;
     /* justify-content: space-around; */
-    cursor: pointer;
+    /* cursor: pointer; */
     z-index: 1;
     
     background: linear-gradient(
