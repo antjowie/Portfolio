@@ -6,25 +6,25 @@
 }
 
 .tog > .background {
-    background: url("res/projects/2020/tog/title.png");
+    background: url("res/projects/tog/title.png");
 }
 
 .ray-tracer > .background {
-    background: url("res/projects/2020/ray-tracer/title.png");
+    background: url("res/projects/ray-tracer/title.png");
 }
 
 .empires > .background {
-    background: url("res/projects/2019/empires/title.png");
+    background: url("res/projects/empires/title.png");
 }
 
 .gauntlet > .background {
-    background: url("res/projects/2018/gauntlet/title.png");
+    background: url("res/projects/gauntlet/title.png");
 }
 
 .galaxians > .background {
-    background: url("res/projects/2018/galaxians/title.png");
+    background: url("res/projects/galaxians/title.png");
 }
 
 .ray-shaper > .background {
-    background: url("res/projects/2018/ray-shaper/title.png");
+    background: url("res/projects/ray-shaper/title.png");
 }
