@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angelo's portfolio</title>
+    <link rel="icon" type="image/png" href="res/icon.png">
+    <!--Ion Icons-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <!--Our own stylesheet-->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/project.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-brand">
+                    <a href="/index.html"><img src="/res/icon.png" alt=""></a>
+                </div>
+
+                <div class="menu-icons open">
+                    <i class="icon ion-md-menu"></i>
+                </div>
+
+                <ul class="nav-list">
+                    <div class="menu-icons close">
+                        <i class="icon ion-md-close"></i>
+                    </div>
+
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Projects</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="/index.html#about-me" class="nav-link">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="background" style="background-image: url(/res/projects/tog/title.png)"></div>
+        <div class="background-dim" data-aos="fade" data-aos-delay="650"></div>
+        <section class="project" data-aos="fade" data-aos-delay="1000">
+            <div class="container">
+                <div class="title-heading">
+                    <!-- <h3>8 weeks - 16 students - gameplay developer</h3> -->
+                    <h1>Temple of Giants</h1>
+                </div>
+                <div class="intro">
+                    <div class='embed-container'>
+                        <iframe src='https://www.youtube.com/embed/73S5u9E5Rvg' frameborder='0' allowfullscreen></iframe>
+                    </div>
+                    <table class="features">
+                        <tr>
+                            <th>Project Type</th>
+                            <td>University / group project</td>
+                        </tr>
+                        <tr>
+                            <th>Project Duration</th>
+                            <td>8 weeks</td>
+                        </tr>
+                        <tr>
+                            <th>Team</th>
+                            <td>1 producer, 4 designers, 6 artists and 5 programmers</td>
+                        </tr>
+                        <tr>
+                            <th>Technologies Used</th>
+                            <td>Unreal Engine 4</td>
+                        </tr>
+                        <tr>
+                            <th>Primary Role(s)</th>
+                            <td>Gameplay programmer</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="description">
+                    <h3>What is Temple of Giants?</h3>
+                    <p>
+                        Temple of Giants is a third-person puzzle-platformer set in Ancient greece. In this singleplayer
+                        experience you play as Nysa, a greek demi-godess with earthbending powers, who tries to save her
+                        mother from a monster who invaded and destroyed her mother's temple.
+                    </p>
+                    <h3>Awards</h3>
+                    <ul>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Art Year 2 (Won)</p>
+                        </li>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Design Year 2 (Runner
+                                up)</p>
+                        </li>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Game Year 2 Teacher's
+                                Pick (Won)</p>
+                        </li>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Best Game Year 2 Audience
+                                Pick (Won)</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="highlights">
+                    <h3>Highlights</h3>
+                    <p>
+                        I was a gameplay developer during this project. I've done the following:
+                    </p>
+                    <ul>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Implemented player abilities
+                            </p>
+                        </li>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Implemented the saving and
+                                checkpoint system</p>
+                        </li>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> Implemented controller
+                                support (UI changes dynamically based on input)</p>
+                        </li>
+                        <li>
+                            <p><i class="icon ion-md-checkmark-circle-outline"></i> In game feedback system that
+                                forwards feedback to our Discord (or any webhook)</p>
+                        </li>
+                    </ul>
+
+                    <a href="/index.html" class="btn">Return to main page</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <p>&copy; 2020 Angelo Anthony Rettob.</p>
+    </footer> -->
+
+    <script type="text/javascript" src="/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                once: true,
+                easing: 'ease-in-out',
+                duration: 650
+            });
+    </script>
+</body>
+
+</html>
