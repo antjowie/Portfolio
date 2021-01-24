@@ -7,8 +7,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.background,
-.background-dim {
+.background {
     position: fixed;
     
     width: 100%;
@@ -20,22 +19,8 @@ body {
     z-index: -100;
 }
 
-.background-dim {
-    /* content: "";
-    
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-     */
-    
-    background: linear-gradient(
-        135deg,
-        var(--gradient-1) 0%,
-        var(--gradient-2) 100%
-    );
-    z-index: -5;
+.background-blur {
+    backdrop-filter: brightness(75%) blur(.75rem);
 }
 
 .project .container {

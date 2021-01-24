@@ -26,6 +26,8 @@ Higlights:
 - Implemented the saving and checkpoint system
 - Implemented controller support (adaptive UI and )
 - Created an in game feedback system that forwards feedback to our Discord
+
+Contributions
 ___
 
 PERSONAL
