@@ -47,6 +47,9 @@ body {
     padding: 2rem;
 }
 
+.description h3{
+    padding-top: 1rem;
+}
 
 /* Project description */
 /* https://embedresponsively.com/ */
@@ -88,16 +91,22 @@ th {
     padding: 2rem;
 }
 
-video {
-    width: 100%;
-    height: 100%;
+.grid-list div {
+    align-self: center;
 }
 
-.contribution-list h2{
+.contribution-list h3{
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .contribution-list .grid-list:nth-child(even) {
     direction:rtl;
     /* background-color: red; */
+}
+
+
+video {
+    width: 100%;
+    height: 100%;
 }
