@@ -78,6 +78,7 @@ table {
 }
 
 th {
+/* tr *:first-child { */
     text-align: left;
     padding: 1rem 0;
     padding-right: 2rem;
