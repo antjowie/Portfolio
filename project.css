@@ -39,7 +39,7 @@ body {
     height: 100%;
         
     background: rgba(10, 10, 10, 0.4);
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     z-index: -5;
 }
 
@@ -81,9 +81,23 @@ th {
     /* width: 50%; */
 }
 
-.intro {
+.grid-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width-small), 1fr));
     grid-gap: 2.5rem;
     padding: 2rem;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+.contribution-list h2{
+    text-align: center;
+}
+
+.contribution-list .grid-list:nth-child(even) {
+    direction:rtl;
+    /* background-color: red; */
 }
