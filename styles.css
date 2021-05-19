@@ -10,10 +10,10 @@
 :root {
     --gradient-1: rgba(56, 56, 56, 0.9);
     --gradient-2: rgba(24, 24, 24, 0.8);
-    
-    --highlight: rgb(243,101,35);
+
+    --highlight: rgb(243, 101, 35);
     --highlight-dim: rgb(167, 66, 20);
-    
+
     --grid-item-width: 35rem;
     --grid-item-width-small: 20rem;
 }
@@ -60,7 +60,7 @@ p a::before {
     /* transform: scaleX(0); */
     transform-origin: left;
     transition: all 650ms;
-    z-index:-10;
+    z-index: -10;
 }
 
 p a:hover::before {
@@ -86,7 +86,7 @@ header {
     left: 0;
     /* The z index of a parent can affect childs? If this is 1 the project cards overlap the hamburger menu */
     /* https://www.freecodecamp.org/news/4-reasons-your-z-index-isnt-working-and-how-to-fix-it-coder-coder-6bc05f103e6c/ */
-    z-index: 100; 
+    z-index: 100;
 }
 
 .container {
@@ -123,9 +123,9 @@ nav {
     width: 60vw;
     height: 100vh;
 
-    background-color:grey;
+    background-color: grey;
     background-image: none;
-    
+
     position: fixed;
     top: 0;
     right: -61vw;
@@ -175,7 +175,6 @@ nav {
             var(--gradient-2) 100%
         ),
         url("res/projects/tog/title.png") center no-repeat; */
-        
 
     position: relative;
 }
@@ -198,10 +197,10 @@ nav {
     position: absolute;
     left: 0;
     top: 0;
-    
+
     width: 100%;
     height: 100%;
-    
+
     background: linear-gradient(
         135deg,
         var(--gradient-1) 0%,
@@ -250,7 +249,8 @@ nav {
     text-transform: initial;
 }
 
-.btn {
+.btn,
+.btn-dimmed {
     background-color: var(--highlight);
     border-radius: 2rem;
     color: #fafafa;
@@ -261,8 +261,18 @@ nav {
     transition: background-color 650ms;
 }
 
-.btn:hover {
+.btn:hover,
+.btn-dimmed:hover {
     background-color: var(--highlight-dim);
+}
+
+.btn-dimmed {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid var(--highlight) 0.1em;
+}
+
+.btn-dimmed:hover {
+    border: solid var(--highlight-dim) 0.1em;
 }
 
 /* Projects */
@@ -297,7 +307,10 @@ nav {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--grid-item-width-small), 1fr));
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(var(--grid-item-width-small), 1fr)
+    );
     grid-gap: 2.5rem;
 }
 
@@ -311,17 +324,17 @@ nav {
     /* justify-content: space-around; */
     /* cursor: pointer; */
     z-index: 1;
-    
+
     background: linear-gradient(
         135deg,
         var(--gradient-1) 0%,
         var(--gradient-2) 100%
-    );    
-    
+    );
+
     overflow: hidden;
 }
 
-.projects-grid-item > .background{
+.projects-grid-item > .background {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -330,13 +343,13 @@ nav {
     height: 100%;
     top: 0;
     left: 0;
-    
+
     z-index: -10;
-    
+
     transition: all 300ms ease-in-out;
 }
 
-.projects-grid-item:hover > .background{
+.projects-grid-item:hover > .background {
     /* height: 120%; */
     transform: scale(1.1);
 }
@@ -358,7 +371,7 @@ nav {
 }
 
 .projects-grid-heading {
-    padding: 0 0 2rem;    
+    padding: 0 0 2rem;
 }
 
 .projects-grid-item i {
@@ -416,9 +429,12 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width-small), 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--grid-item-width-small), 1fr)
+    );
     max-width: inherit;
     align-items: center;
 }
@@ -488,7 +504,7 @@ nav {
 
 .go-back {
     text-align: center;
-    font-size: 5rem;   
+    font-size: 5rem;
 }
 
 /* .skill-grid-item p {
@@ -511,9 +527,12 @@ footer {
 
 @media screen and (min-width: 480px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width),1fr));
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(var(--grid-item-width), 1fr)
+        );
     }
-    
+
     .hero::before {
         height: 10rem;
         background-image: url("res/wave/wave-medium.png");
@@ -605,7 +624,7 @@ footer {
     .about {
         top: 65%;
     }
-    
+
     .about-me::before {
         height: 22.7rem;
         /* height: 12vw; */
