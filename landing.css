@@ -1,8 +1,8 @@
 /* This is where I specify the background for each project card */
 
 /* Professional projects */
-.shoot > .background {
-    background: url("res/template/camping.jpg");
+.last-resort > .background {
+    background: url("res/projects/shoot/splash.jpg");
 }
 
 .tog > .background {
