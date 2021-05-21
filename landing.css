@@ -9,6 +9,15 @@
     background: url("res/projects/tog/title.png");
 }
 
+/* Personal */
+.tempest > .background {
+    background: url("res/projects/tempest/splash.png");
+}
+
+.aphelion > .background {
+    background: url("res/projects/aphelion/voxel.png");
+}
+
 .ray-tracer > .background {
     background: url("res/projects/ray-tracer/title.png");
 }
