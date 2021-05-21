@@ -316,6 +316,7 @@ nav {
 
 .projects-grid-item {
     min-height: 60rem;
+    height: 100%;
     padding: 5rem;
     color: #fafafa;
     position: relative;
