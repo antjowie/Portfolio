@@ -1,0 +1,30 @@
+@tailwind base;
+/* Write your global styles here, in PostCSS syntax */
+@tailwind components;
+@tailwind utilities;
+
+.hover-line {
+    position: relative;
+}
+
+.hover-line:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    transform: scalex(0);
+
+    transform-origin: bottom;
+    transition: transform 250ms;
+    @apply bg-highlight;
+}
+
+.hover-line:hover:before {
+    transform: scalex(1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
