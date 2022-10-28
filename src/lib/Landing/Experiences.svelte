@@ -6,10 +6,10 @@
         {
             src: "companies/abstraction.png",
             href: "https://abstraction.games/",
-            title: "C++ Programmer - Internship",
+            title: "C++ Programmer - Developer",
             company: "Abstraction Games",
-            duration: "October 2021 - November 2022",
-            text: ["Started my internship in 2021. First task yet to receive!"],
+            duration: "October 2021 - Present",
+            text: ["Can't disclose anything yet, but soon will!"],
         },
         {
             src: "companies/buas.png",
