@@ -16,7 +16,7 @@
 
     <div class="col-span-3 col-start-2">
         <Hero />
-        <div class="p-4 sm:p-8 xl:pr-80 xl:px-16">
+        <div class="p-4 sm:p-8 xl:pr-80 xl:px-16 max-w-screen-2xl">
             <div class="xl:hidden"><About /></div>
             <div data-aos="fade-up"><Experiences /></div>
             <div data-aos="fade-up"><Work /></div>

@@ -27,6 +27,9 @@ const config = {
                 secondary: "#FFFFFF",
                 highlight: "#A0C1E6",
             },
+            screens: {
+                uw: "2560px",
+            },
         },
     },
     plugins: [require("tailwind-scrollbar")],

@@ -57,7 +57,7 @@
     /> -->
 
     <!-- Top nav part -->
-    <ul class="flex pr-2 space-x-2 justify-end items-center h-12 xl:space-x-8 xl:pr-16">
+    <ul class="flex pr-2 space-x-2 justify-end items-center h-12 xl:space-x-8 xl:pr-16 uw:pr-96">
         <!-- <li class=""><a class="hover-line" href="resume.pdf" rel="external">Resume</a></li> -->
         <li><a class="hover-line" href="#hero">Highlight</a></li>
         <li><a class="hover-line" href="#experiences">Experiences</a></li>
