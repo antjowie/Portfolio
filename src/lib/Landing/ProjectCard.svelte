@@ -33,7 +33,7 @@
                 {src}
                 alt=""
                 class="absolute inset-0 z-0 w-full h-full object-cover 
-                transition scale-110 group-hover:scale-100 group-active:scale-125"
+                transition scale-110 group-hover:scale-125 group-active:scale-100"
             />
         </div>
     </div>
