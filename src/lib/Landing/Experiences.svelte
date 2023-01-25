@@ -7,7 +7,7 @@
             src: "companies/abstraction.png",
             href: "https://abstraction.games/",
             title: "C++ Programmer - Developer",
-            company: "Abstraction Games",
+            company: "abstraction",
             duration: "October 2021 - Present",
             text: ["Can't disclose anything yet, but soon will!"],
         },
@@ -16,15 +16,15 @@
             href: "https://www.buas.nl/en",
             title: "IGAD Programmer Student",
             company: "Breda University of Applied Sciences",
-            duration: "September 2018 - Ongoing",
+            duration: "September 2018 - July 2022",
             text: [
-                "In year 3, I worked with 30 others on the year long project <a href='https://store.steampowered.com/app/1491650/Last_Resort/' target='_blank' class='hover-line text-highlight'>Last Resort</a>. Where I learned about UE4 multiplayer tech.",
-
-                "In year 2, I learned about graphics and maths. I built a renderer using OpenGLES for the Raspberry Pi, resulting in the game <a href='https://github.com/antjowie/empires' target='_blank' class='hover-line text-highlight'>Empires</a>. I also made a <a href='https://github.com/antjowie/ray-tracer' target='_blank' class='hover-line text-highlight'>ray tracer</a>. Finally, I worked with a team to create the best game of year 2, <a href='https://buas.itch.io/temple-of-giants' target='_blank' class='hover-line text-highlight'>Temple of Giants</a>.",
+                "Started in 2018. Ranked 13th from selection with my intake game <a href='https://github.com/antjowie/Ray-Shaper' target='_blank' class='hover-line text-highlight'>Ray Shaper</a>. The year I started to learn C++.",
 
                 "In year 1, I've created small games such as <a href='https://github.com/antjowie/gauntlet' target='_blank' class='hover-line text-highlight'>Gauntlet</a> and <a href='https://github.com/antjowie/galaxians' target='_blank' class='hover-line text-highlight'>Galaxians</a>. These were created using school's framework. Giving me a better understanding of system design and patterns.",
 
-                "Started in 2018. Ranked 13th from selection with my intake game <a href='https://github.com/antjowie/Ray-Shaper' target='_blank' class='hover-line text-highlight'>Ray Shaper</a>. The year I started to learn C++.",
+                "In year 2, I learned about graphics and maths. I built a renderer using OpenGLES for the Raspberry Pi, resulting in the game <a href='https://github.com/antjowie/empires' target='_blank' class='hover-line text-highlight'>Empires</a>. I also made a <a href='https://github.com/antjowie/ray-tracer' target='_blank' class='hover-line text-highlight'>ray tracer</a>. Finally, I worked with a team to create the best game of year 2, <a href='https://github.com/antjowie/empires' target='_blank' class='hover-line text-highlight'>Temple of Giants</a>.",
+
+                "In year 3 and 4 lots of games were made, I worked with 30 others on the year long project <a href='https://store.steampowered.com/app/1491650/Last_Resort/' target='_blank' class='hover-line text-highlight'>Last Resort</a> (on Steam). Where I learned about UE4 multiplayer tech.",
             ],
         },
     ];
