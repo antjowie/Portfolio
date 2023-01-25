@@ -12,6 +12,7 @@
     <a
         {href}
         target="_blank"
+        rel="noreferrer"
         class="{size} hover-line text-primary flex items-center gap-1 transition hover:text-highlight active:scale-75"
     >
         <div>

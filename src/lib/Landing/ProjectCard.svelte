@@ -12,6 +12,7 @@
 <a
     {href}
     target="_blank"
+    rel="noreferrer"
     class="group my-6 grid grid-cols-1 bg-background-light rounded-xl overflow-hidden 2xl:grid-cols-2 2xl:h-72"
     data-aos="fade-up"
 >

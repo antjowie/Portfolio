@@ -1,7 +1,6 @@
 <script>
     import ProjectCard from "$lib/Landing/ProjectCard.svelte";
     import Button from "$lib/Button.svelte";
-    import { slide } from "svelte/transition";
 
     const projects = [
         {
@@ -105,6 +104,9 @@
 
     <div
         on:click|preventDefault={() => {
+            showMoreProjects = !showMoreProjects;
+        }}
+        on:keypress|preventDefault={() => {
             showMoreProjects = !showMoreProjects;
         }}
     >
