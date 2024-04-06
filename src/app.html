@@ -36,20 +36,19 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
             rel="stylesheet"
         />
-
         <!-- AOS -->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-        %svelte.head%
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        %sveltekit.head%
     </head>
 
     <body
         class="bg-background text-primary scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent scrollbar-thumb-rounded-full"
     >
-        <div id="svelte">%svelte.body%</div>
+        <div id="svelte">%sveltekit.body%</div>
 
         <!-- AOS -->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({
                 offset: 200,
