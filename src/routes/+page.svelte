@@ -1,10 +1,10 @@
 <script>
     import Navigation from "$lib/Navigation.svelte";
-    import Hero from "$lib/Landing/Hero.svelte";
-    import About from "$lib/Landing/About.svelte";
-    import Work from "$lib/Landing/Work.svelte";
-    import Experiences from "$lib/Landing/Experiences.svelte";
-    import Skills from "$lib/Landing/Skills.svelte";
+    import Hero from "$lib/landing/Hero.svelte";
+    import About from "$lib/landing/About.svelte";
+    import Work from "$lib/landing/Work.svelte";
+    import Experiences from "$lib/landing/Experiences.svelte";
+    import Skills from "$lib/landing/Skills.svelte";
 </script>
 
 <Navigation />
