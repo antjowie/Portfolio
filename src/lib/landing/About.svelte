@@ -25,7 +25,7 @@
                 targets: root.querySelectorAll("h1, p, .contact, img"),
                 opacity: [0, 1],
                 translateY: [50, 0],
-                delay: anime.stagger(200),
+                delay: anime.stagger(150),
                 // duration: 250,
                 easing: "easeOutQuart",
             })
@@ -38,7 +38,7 @@
                     translateZ: 0,
                     easing: "easeOutBack",
                     duration: 600,
-                    delay: (el, i) => 70 * (i + 1) + 200,
+                    delay: (el, i) => 80 * (i + 1) + 200,
                 },
                 0
             );
@@ -48,7 +48,9 @@
                 width: ["100%", "25%"],
                 duration: 1000,
                 easing: "easeInOutQuad",
-            });
+            }, 
+            "-=700"
+        );
         } else {
             tl.add(
                 {
