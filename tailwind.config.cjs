@@ -13,7 +13,6 @@ const config = {
             spacing: {
                 "1/3screen": "33vh",
             },
-
             maxWidth: {
                 "1/4": "25vw",
                 "1/2": "50vw",

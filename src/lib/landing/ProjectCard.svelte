@@ -21,11 +21,12 @@
         <div class="relative w-full h-40 overflow-hidden 2xl:h-full">
             <!-- Gradient -->
             <div
-                class="hidden 2xl:block absolute bg-gradient-to-t from-black w-full h-full opacity-90 z-10 transition group-hover:translate-y-16"
+                class="hidden 2xl:block absolute bg-gradient-to-t from-zinc-900 w-full h-full opacity-90 z-10 transition group-hover:translate-y-16"
             />
+            
             <!-- Hover gradient -->
             <div
-                class="hidden 2xl:block absolute bg-transparent w-full h-full transtition duration-200 opacity-50 z-10 group-hover:bg-black group-active:opacity-0"
+                class="hidden 2xl:block absolute bg-transparent w-full h-full transtition duration-200 opacity-85 z-10 group-hover:bg-zinc-900 group-active:opacity-50"
             />
 
             <!-- Image -->
@@ -39,23 +40,20 @@
     </div>
     <!-- Title -->
     <div
-        class="row-start-2 col-start-1 z-20 m-4 pb-2 border-b-2 border-primary border-opacity-50 2xl:row-start-1 2xl:relative 2xl:border-0"
+        class="row-start-2 col-start-1 z-20 m-4 pb-2 border-b-2 border-primary border-opacity-50 2xl:row-start-1 2xl:border-0 2xl:place-self-end 2xl:justify-self-start 2xl:sizing 2xl:absolute 2xl:w-1/2"
     >
-        <div class="2xl:absolute bottom-2">
-            <h2 class="font-bold text-3xl text-secondary">{title}</h2>
-            <p class="text-sm">{summary}</p>
-        </div>
+        <h2 class="font-bold text-3xl text-secondary 2xl:group-hover:text-4xl transtition duration-200">{title}</h2>
+        <p class="text-sm 2xl:group-hover:text-lg transtition duration-200">{summary}</p>
     </div>
 
     <!-- Text -->
     <div
         class="z-20 row-start-3 col-start-1 m-4 mt-0 2xl:row-start-1 2xl:col-start-2 2xl:flex items-center 
-        transition  2xl:opacity-0 2xl:translate-x-10 2xl:group-hover:translate-x-0 2xl:group-hover:opacity-100"
+        transition 2xl:opacity-0 2xl:translate-x-10 2xl:group-hover:translate-x-0 2xl:group-hover:opacity-100"
     >
         <div class="z-20">
             <p class="my-2">{text}</p>
             <ul>
-                Contributions:
                 {#each tasks as task}
                     <li class="">
                         <p>

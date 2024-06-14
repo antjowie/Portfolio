@@ -9,7 +9,7 @@
     >
         <!-- Highlighted projects text -->
         <div
-            class="absolute inset-0 opacity-25 bg-gradient-to-t from-black to-transparent
+            class="absolute inset-0 opacity-25 bg-gradient-to-t from-background to-transparent
                 transition group-hover:opacity-100"
         >
             <div class="absolute p-8 bottom-0">
