@@ -16,7 +16,7 @@
         class="{size} hover-line text-primary flex items-center gap-1 transition hover:text-highlight active:scale-75"
     >
         <div>
-            <Icon icon="mdi:{icon}" />
+            <Icon icon="{icon}" />
         </div>
         <p class="capitalize text-base">{name}</p>
     </a>

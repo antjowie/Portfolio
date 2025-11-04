@@ -106,15 +106,18 @@
             Growing up playing R&C, been crafting games since 2017! <br> I enjoy all things tech related, be it web, software or graphics development.
         </p>
         <div class="contact">
-            <Button href="resume.pdf" text="Resume" />
-
+            <div class="grid grid-cols-2 gap-2">            
+                <Button href="resume.pdf" text="Resume" cta="true" target="_blank" />
+                <!-- <Button href="#blog" text="Blog"/> -->
+            </div>
+            
             <div class="mt-4 flex gap-2 h-12 items-center">
                 <!-- Mail -->
-                <Icon href="mailto:angelo05rettob@gmail.com" icon="email-outline" />
+                <Icon href="mailto:angelo05rettob@gmail.com" icon="mdi:email-outline" />
                 <!-- LinkedIn -->
-                <Icon href="https://www.linkedin.com/in/angelorettob/" icon="linkedin" />
+                <Icon href="https://www.linkedin.com/in/angelorettob/" icon="mdi:linkedin" />
                 <!-- GitHub -->
-                <Icon href="https://github.com/antjowie" icon="github" />
+                <Icon href="https://github.com/antjowie" icon="mdi:github" />
             </div>
         </div>
     </div>

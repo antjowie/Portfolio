@@ -9,7 +9,10 @@
             title: "C++ Programmer - Developer",
             company: "abstraction",
             duration: "October 2021 - Present",
-            text: ["Worked on Gigantic: Rampage edition."],
+            text: [
+                "Worked on Gigantic: Rampage edition.",
+                "Worked on Lords of The Fallen II.",
+            ],
         },
         {
             src: "companies/buas.png",
@@ -86,11 +89,13 @@
                 <h3 class="mb-4">{current.duration}</h3>
                 <ul class="">
                     {#each current.text as entry}
-                        <li class="flex flex-row items-center gap-2 py-2">
-                            <Icon
-                                class="text-highlight flex-shrink-0"
-                                icon="mdi:checkbox-marked-circle-outline"
-                            />
+                        <li class="flex flex-row gap-2 py-1">
+                            <div class="py-1">
+                                <Icon
+                                    class="text-highlight flex-shrink-0"
+                                    icon="mdi:checkbox-marked-circle-outline"
+                                />
+                            </div>
                             <div>
                                 {@html entry}
                             </div>

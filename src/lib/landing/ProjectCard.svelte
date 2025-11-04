@@ -1,6 +1,7 @@
 <script>
     import Icon from "@iconify/svelte";
 
+    export let target = "_blank";
     export let href;
     export let src;
     export let title;
@@ -11,7 +12,7 @@
 
 <a
     {href}
-    target="_blank"
+    target={target}
     rel="noreferrer"
     class="group my-6 grid grid-cols-1 bg-background-light rounded-xl overflow-hidden 2xl:grid-cols-2 2xl:h-72"
     data-aos="fade-up"
@@ -33,7 +34,7 @@
             <img
                 {src}
                 alt=""
-                class="absolute inset-0 z-0 w-full h-full object-cover 
+                class="absolute inset-0 z-0 w-full h-full object-cover
                 transition scale-110 group-hover:scale-125 group-active:scale-100"
             />
         </div>
@@ -55,16 +56,16 @@
             <p class="my-2">{text}</p>
             <ul>
                 {#each tasks as task}
-                    <li class="">
-                        <p>
+                    <li class="flex flex-row gap-2">
+                        <div>
                             <Icon
                                 class="text-highlight"
                                 style="display:inline"
                                 icon="mdi:checkbox-marked-circle-outline"
                                 inline={true}
                             />
-                            {task}
-                        </p>
+                            </div>
+                            <p>{task}</p>
                     </li>
                 {/each}
             </ul>

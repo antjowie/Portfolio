@@ -63,6 +63,7 @@
         <li><a class="hover-line" href="#experiences">Experiences</a></li>
         <li><a class="hover-line" href="#work">Work</a></li>
         <li><a class="hover-line" href="#skills">Skills</a></li>
+        <!-- <li><a class="hover-line" href="#blog">Blog</a></li> -->
         <!-- <li class=""><a href="#lightmode">LightMode</a></li> -->
     </ul>
 </nav>
@@ -81,6 +82,7 @@
             <li><a class="hover-line" href="#experiences">Experiences</a></li>
             <li><a class="hover-line" href="#work">Work</a></li>
             <li><a class="hover-line" href="#skills">Skills</a></li>
+            <!-- <li><a class="hover-line" href="#blog">Blog</a></li> -->
             <!-- <li ><a href="#lightmode">LightMode</a></li> -->
         </ul>
     </nav>
