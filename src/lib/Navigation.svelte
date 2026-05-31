@@ -1,29 +1,24 @@
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
     import Icon from "@iconify/svelte";
 
     import { fly, fade } from "svelte/transition";
 
-    let windowHeight;
-    let windowWidth;
-    $: desktopView = windowWidth >= 1280;
-    $: inHeroSection = scrollPos < windowHeight;
-
-    let navVisible = true;
-    let sideNavVisible = false;
+    let scrollPos = $state(0);
     let lastScrollPos = 0;
-    let scrollPos = 0;
 
-    onMount(() => {
-        // Would use desktopView, but it is false during OnMount?
-        if (windowWidth >= 1280 && scrollY > windowHeight) {
-            navVisible = false;
-            sideNavVisible = true;
-        } else {
-            navVisible = true;
-            sideNavVisible = false;
-        }
-    });
+    let windowHeight = $state(0);
+    let windowWidth = $state(0);
+    let desktopView = $derived(windowWidth >= 1280);
+    let inHeroSection = $derived(scrollPos < windowHeight);
+
+    let navVisible = $state(true);
+    let sideNavVisible = $state(false);
+
+    let workElem = $state<HTMLElement | null>(null);
+    let experiencesElem = $state<HTMLElement | null>(null);
+    let aboutElem = $state<HTMLElement | null>(null);
+    let currentElem = $state("");
 
     function onScroll() {
         // If on large screen, check if we are in hero section
@@ -41,53 +36,101 @@
             navVisible = hasScrolledUp;
             sideNavVisible = false;
         }
+
+        if (aboutElem && experiencesElem && workElem) {
+            console.log(aboutElem.getBoundingClientRect().top);
+            console.log(currentElem);
+            if (aboutElem.getBoundingClientRect().top < windowHeight / 4) currentElem = "about";
+            else if (experiencesElem.getBoundingClientRect().top < windowHeight / 4)
+                currentElem = "experiences";
+            else if (workElem.getBoundingClientRect().top < windowHeight / 4) currentElem = "work";
+            else currentElem = "";
+        }
     }
+
+    onMount(() => {
+        // Would use desktopView, but it is false during OnMount?
+        if (windowWidth >= 1280 && scrollY > windowHeight) {
+            navVisible = false;
+            sideNavVisible = true;
+        } else {
+            navVisible = true;
+            sideNavVisible = false;
+        }
+
+        workElem = document.getElementById("work");
+        experiencesElem = document.getElementById("experiences");
+        aboutElem = document.getElementById("about");
+
+        onScroll();
+    });
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} on:scroll={onScroll} />
+<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} onscroll={onScroll} />
 
 <!-- Topbar -->
 <nav
-    class="fixed z-40 right-0 -top-12 w-screen bg-background bg-opacity-75 transition"
+    class="fixed -top-12 right-0 z-40 w-screen bg-surface-a10/75 transition"
     class:translate-y-12={navVisible}
 >
-    <!-- Fade on left side of nav bar -->
-    <!-- <div
-        class="left-1/3screen absolute inset-0 w-1/4 bg-gradient-to-r from-background-light via-background-light to-transparent z-50 bg-opacity-100"
-    /> -->
-
     <!-- Top nav part -->
-    <ul class="flex pr-2 space-x-2 justify-end items-center h-12 xl:space-x-8 xl:pr-16 uw:pr-96">
-        <!-- <li class=""><a class="hover-line" href="resume.pdf" rel="external">Resume</a></li> -->
-        <li><a class="hover-line" href="#hero">Highlight</a></li>
-        <li><a class="hover-line" href="#experiences">Experiences</a></li>
-        <li><a class="hover-line" href="#work">Work</a></li>
-        <li><a class="hover-line" href="#skills">Skills</a></li>
-        <!-- <li><a class="hover-line" href="#blog">Blog</a></li> -->
-        <!-- <li class=""><a href="#lightmode">LightMode</a></li> -->
+    <ul class="flex h-12 items-center justify-end space-x-2 pr-2 uw:pr-96 xl:space-x-8 xl:pr-16">
+        <li>
+            <a class="hover-line text-light-a10 hover:text-primary-a50 transition" href="#work"
+                >Work</a
+            >
+        </li>
+        <li>
+            <a
+                class="hover-line text-light-a10 hover:text-primary-a50 transition"
+                href="#experiences">Experiences</a
+            >
+        </li>
+        <li>
+            <a class="hover-line text-light-a10 hover:text-primary-a50 transition" href="#about"
+                >About me</a
+            >
+        </li>
     </ul>
 </nav>
 
 <!-- Sidebar -->
 {#if sideNavVisible}
     <nav
-        class="fixed z-40 right-0 transition h-screen w-1/6"
+        class="fixed right-0 z-40 h-screen w-1/6 transition"
         in:fly={{ x: 150, duration: 250 }}
         out:fly={{ y: 150, duration: 250 }}
     >
         <!-- Top nav part -->
-        <ul class="flex flex-col m-auto items-starts mt-16 mx-16 space-y-4 tracking-wider text-lg">
-            <!-- <li><a class="hover-line" href="resume.pdf" rel="external">Resume</a></li> -->
-            <li><a class="hover-line" href="#hero">Highlight</a></li>
-            <li><a class="hover-line" href="#experiences">Experiences</a></li>
-            <li><a class="hover-line" href="#work">Work</a></li>
-            <li><a class="hover-line" href="#skills">Skills</a></li>
-            <!-- <li><a class="hover-line" href="#blog">Blog</a></li> -->
-            <!-- <li ><a href="#lightmode">LightMode</a></li> -->
+        <ul class="items-starts m-auto mx-16 mt-16 flex flex-col space-y-4 text-lg tracking-wider">
+            <li>
+                <a
+                    class="hover-line {currentElem === 'work'
+                        ? 'text-light-a0'
+                        : 'text-light-a10'} hover:text-primary-a50 transition"
+                    href="#work">Work</a
+                >
+            </li>
+            <li>
+                <a
+                    class="hover-line {currentElem === 'experiences'
+                        ? 'text-light-a0'
+                        : 'text-light-a10'} hover:text-primary-a50 transition"
+                    href="#experiences">Experiences</a
+                >
+            </li>
+            <li>
+                <a
+                    class="hover-line {currentElem === 'about'
+                        ? 'text-light-a0'
+                        : 'text-light-a10'} hover:text-primary-a50 transition"
+                    href="#about">About me</a
+                >
+            </li>
         </ul>
     </nav>
 {:else if desktopView}
-    <div class="z-50 fixed right-16 bottom-8" transition:fade>
-        <Icon class="text-4xl animate-bounce opacity-75" icon="ic:outline-mouse" />
+    <div class="fixed right-16 bottom-8 z-50" transition:fade>
+        <Icon class="animate-bounce text-4xl opacity-75" icon="ic:outline-mouse" />
     </div>
 {/if}

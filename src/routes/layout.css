@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+    .hover-line {
+        position: relative;
+        color: var(--color-primary-a50);
+    }
+
+    .hover-line:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        transform: scalex(0);
+        background-color: var(--color-primary-a50);
+
+        transform-origin: bottom;
+        transition: transform 250ms;
+    }
+
+    .hover-line:hover:before {
+        transform: scalex(1);
+    }
+
+    html {
+        scroll-behavior: smooth;
+        color: var(--color-light-a10);
+        background-color: var(--color-surface-a0);
+    }
+}
+
+@theme {
+    --default-font-family: "Poppins", var(--default-font-family);
+    --font-heading: "Montserrat", "Poppins", var(--font-sans);
+
+    --spacing-1\/3screen: 33vh;
+    --max-width-1\/4: 25vw;
+    --max-width-1\/2: 50vw;
+    --max-width-3\/4: 75vw;
+
+    --breakpoint-uw: 2560px;
+
+    /* Colors */
+    --color-light-a0: #ffffff;
+    --color-light-a10: #c5c5c5;
+    --color-dark-a0: #000000;
+    --color-dark-a10: #0e0e0e;
+
+    --color-primary-a0: #87baed; /* CORE BRAND: Main action buttons, active links, and brand icons */
+    --color-primary-a10: #93c1ef; /* HOVER STATE: Used when hovering over a0 primary items */
+    --color-primary-a20: #9fc8f1; /* FOCUS STATE: Borders/rings for focused keyboard navigation */
+    --color-primary-a30: #abcff3; /* MUTED BRAND: Secondary icons or disabled active states */
+    --color-primary-a40: #b7d6f5; /* ACCENT TEXT: High-contrast headings that need brand flavor */
+    --color-primary-a50: #c3ddf7; /* LINK TEXT: The default highly readable text color on dark surfaces */
+
+    --color-surface-a0: #121212; /* APP BACKGROUND: The canvas/base layer of the entire website */
+    --color-surface-a10: #252525; /* BASE CONTAINERS: Low-elevation layouts, free buttons, structural sidebars, or footers */
+    --color-surface-a20: #393939; /* CARDS & MODALS: Main content boxes, dialogs, and popups */
+    --color-surface-a30: #4f4f4f; /* INTERACTIVE SURFACES: Hover states for cards, buttons, or list items */
+    --color-surface-a40: #666; /* STRIPED ROWS: Table headers, borders, and divider lines */
+    --color-surface-a50: #7d7d7d; /* MUTED TEXT: Placeholder text, captions, timestamps, and disabled text */
+
+    --color-success-a0: #7dff95;
+    --color-success-a10: #9dffac;
+    --color-success-a20: #b8ffc1;
+
+    --color-warning-a0: #ffbc5e;
+    --color-warning-a10: #ffca83;
+    --color-warning-a20: #ffd8a4;
+
+    --color-danger-a0: #ff8080;
+    --color-danger-a10: #ff9b99;
+    --color-danger-a20: #ffb5b2;
+
+    --color-info-a0: #87d1ff;
+    --color-info-a10: #a1dbff;
+    --color-info-a20: #b9e4ff;
+}
+
+@utility scrollbar-rounded {
+    &::-webkit-scrollbar-thumb {
+        border-radius: var(--radius-md);
+    }
+}

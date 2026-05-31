@@ -1,14 +1,13 @@
-<script>
+<script lang="ts">
     import Icon from "$lib/Icon.svelte";
 
-    export let category;
-    export let icons;
+    let { category, icons } = $props();
 </script>
 
 <div>
-    <h2 class="text-xl text-highlight pt-4">{category}</h2>
-    <div class="flex gap-2 w-32">
-        {#each icons as icon}
+    <h2 class="text-highlight pt-4 text-xl">{category}</h2>
+    <div class="flex w-32 gap-2">
+        {#each icons as icon (icon)}
             <!-- <Icon href={icon.href} icon={icon.icon} name={icon.name ? icon.name : icon.icon} /> -->
             <Icon href={icon.href} icon={icon.icon} />
         {/each}

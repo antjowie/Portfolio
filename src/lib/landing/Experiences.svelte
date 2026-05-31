@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Icon from "@iconify/svelte";
     import { fly } from "svelte/transition";
 
@@ -9,10 +9,7 @@
             title: "C++ Programmer - Developer",
             company: "abstraction",
             duration: "October 2021 - Present",
-            text: [
-                "Worked on Gigantic: Rampage edition.",
-                "Worked on Lords of The Fallen II.",
-            ],
+            text: ["Worked on Lords of The Fallen II.", "Worked on Gigantic: Rampage edition."]
         },
         {
             src: "companies/buas.png",
@@ -21,49 +18,42 @@
             company: "Breda University of Applied Sciences",
             duration: "September 2018 - July 2022",
             text: [
-                "Started in 2018. Ranked 13th from selection with my intake game <a href='https://github.com/antjowie/Ray-Shaper' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Ray Shaper</a>. The year I started to learn C++.",
-
-                "In year 1, I've created small games such as <a href='https://github.com/antjowie/gauntlet' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Gauntlet</a> and <a href='https://github.com/antjowie/galaxians' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Galaxians</a>. These were created using school's framework. Giving me a better understanding of system design and patterns.",
-
-                "In year 2, I learned about graphics and maths. I built a renderer using OpenGLES for the Raspberry Pi, resulting in the game <a href='https://github.com/antjowie/empires' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Empires</a>. I also made a <a href='https://github.com/antjowie/ray-tracer' target='_blank' rel='noreferrer' class='hover-line text-highlight'>ray tracer</a>. Finally, I worked with a team to create the best game of year 2, <a href='https://github.com/antjowie/empires' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Temple of Giants</a>.",
-
-                "In year 3 and 4 lots of games were made, I worked with 30 others on the year long project <a href='https://store.steampowered.com/app/1491650/Last_Resort/' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Last Resort</a> (on Steam). Where I learned about UE4 multiplayer tech.",
-            ],
-        },
+                "In year 3 and 4 lots of games were made. Worked with 30 students on a year long project <a href='https://store.steampowered.com/app/1491650/Last_Resort/' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Last Resort</a>. My focus was on multiplayer.",
+                "In year 2, learned about graphics and maths. built a renderer using OpenGLES for the Raspberry Pi, resulting in <a href='https://github.com/antjowie/empires' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Empires</a>. Made a <a href='https://github.com/antjowie/ray-tracer' target='_blank' rel='noreferrer' class='hover-line text-highlight'>ray tracer</a>. Worked in a team to create the best year 2 game <a href='https://buas.itch.io/temple-of-giants' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Temple of Giants</a>.",
+                "In year 1, created small games like <a href='https://github.com/antjowie/gauntlet' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Gauntlet</a> and <a href='https://github.com/antjowie/galaxians' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Galaxians</a>. Learned about system design and patterns.",
+                "Started in 2018. Ranked 13th for intake game <a href='https://github.com/antjowie/Ray-Shaper' target='_blank' rel='noreferrer' class='hover-line text-highlight'>Ray Shaper</a>. Started learning C++."
+            ]
+        }
     ];
 
     let index = 0;
-    let toRight;
-    let current = experiences[index];
+    let toRight = $state(false);
+    let current = $state(experiences[index]);
 </script>
 
 <div id="experiences" class="p-4 py-8">
-    <h2 class="py-4 font-bold font-heading text-5xl text-secondary">My career</h2>
-    <p class="text-lg">Places I've had the pleasure of working at.</p>
+    <h2 class="text-light-a0 py-4 font-heading text-5xl font-bold">My work experiences</h2>
 
-    <div class="py-4 grid grid-cols-2">
-        {#each experiences as val, i}
+    <div class="grid grid-cols-2 py-4">
+        {#each experiences as val, i (val.title)}
             <!-- The button to select an experience -->
             <button
-                on:mousedown={() => {
-                    if (current !== val) {
+                onmousedown={() => {
+                    if (current.title !== val.title) {
                         current = val;
                         toRight = i > index;
                         index = i;
                     }
                 }}
-                class="relative group h-32 border-b-4 transition "
-                class:border-primary={val !== current}
-                class:border-highlight={val === current}
+                class="group relative h-32 border-b-4 transition"
+                class:border-primary-a0={val.title === current.title}
+                class:border-primary-a50={val.title !== current.title}
             >
                 <div
-                    class="absolute inset-0 transition bg-background group-active:opacity-50 group-active:bg-white
-                    "
-                    class:bg-white={val === current}
-                    class:opacity-10={val === current}
-                />
+                    class="absolute inset-0 cursor-pointer bg-surface-a10 transition group-hover:bg-surface-a30"
+                ></div>
                 <img
-                    class="z-10 object-contain m-auto max-w-full h-3/4 transition scale-100 group-hover:scale-110
+                    class="z-10 m-auto h-3/4 max-w-full scale-100 object-contain transition group-hover:scale-110
                     group-active:scale-75"
                     src={val.src}
                     alt=""
@@ -75,28 +65,29 @@
     <!-- https://stackoverflow.com/questions/59882179/svelte-transition-between-two-elements-jumps -->
     <!-- By creating a grid we force the div to be in the same
     since delay only changes the visiblity -->
-    <div class="grid grid-rows-1 grid-cols-1">
+    <div class="grid grid-cols-1 grid-rows-1">
         {#key current}
             <div
-                class="col-start-1 row-start-1 col-spawn"
+                class="col-spawn col-start-1 row-start-1"
                 in:fly={{ x: 40 * (toRight ? 1 : -1), delay: 250, duration: 250 }}
                 out:fly={{ x: 40 * (toRight ? -1 : 1), duration: 250 }}
             >
                 <h2 class="text-2xl font-bold">{current.title}</h2>
                 <a class="hover-line" href={current.href} target="_blank" rel="noreferrer"
-                    ><h2 class="text-2xl font-bold text-highlight inline">#{current.company}</h2></a
+                    ><h2 class="text-highlight inline text-2xl font-bold">#{current.company}</h2></a
                 >
                 <h3 class="mb-4">{current.duration}</h3>
                 <ul class="">
-                    {#each current.text as entry}
-                        <li class="flex flex-row gap-2 py-1">
+                    {#each current.text as entry (entry)}
+                        <li class="flex flex-row gap-2 py-0.5 leading-t">
                             <div class="py-1">
                                 <Icon
-                                    class="text-highlight flex-shrink-0"
+                                    class="text-highlight shrink-0"
                                     icon="mdi:checkbox-marked-circle-outline"
                                 />
                             </div>
                             <div>
+                                <!-- eslint-disable-next-line svelte/no-at-html-tags -->
                                 {@html entry}
                             </div>
                         </li>

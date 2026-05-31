@@ -1,11 +1,7 @@
-<script>
+<script lang="ts">
     import Icon from "@iconify/svelte";
 
-    export let href;
-    export let icon;
-    export let name = "";
-
-    export let size = "text-6xl";
+    let { href, icon, name = "", size = "text-6xl" } = $props();
 </script>
 
 <div class="transition hover:scale-110">
@@ -13,11 +9,12 @@
         {href}
         target="_blank"
         rel="noreferrer"
-        class="{size} hover-line text-primary flex items-center gap-1 transition hover:text-highlight active:scale-75"
+        class="{size} text-primary hover:text-highlight flex items-center
+        gap-1 text-primary-a50 transition active:scale-75"
     >
         <div>
-            <Icon icon="{icon}" />
+            <Icon {icon} />
         </div>
-        <p class="capitalize text-base">{name}</p>
+        <p class="text-base capitalize">{name}</p>
     </a>
 </div>

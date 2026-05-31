@@ -1,74 +1,109 @@
-<script>
+<script lang="ts">
     import Icon from "@iconify/svelte";
 
-    export let target = "_blank";
-    export let href;
-    export let src;
-    export let title;
-    export let summary;
-    export let text;
-    export let tasks;
+    let { target = "_blank", href, src, title, summary, text, tasks } = $props();
 </script>
 
-<a
-    {href}
-    target={target}
-    rel="noreferrer"
-    class="group my-6 grid grid-cols-1 bg-background-light rounded-xl overflow-hidden 2xl:grid-cols-2 2xl:h-72"
-    data-aos="fade-up"
->
-    <!-- Image div -->
-    <div class="row-start-1 col-start-1 col-span-2">
-        <div class="relative w-full h-40 overflow-hidden 2xl:h-full">
-            <!-- Gradient -->
+<div data-aos="fade-up">
+    <a
+        {href}
+        {target}
+        rel="noreferrer"
+        class="
+    group my-6
+    grid grid-cols-1
+    overflow-hidden rounded-xl
+    bg-surface-a10 text-light-a10
+    no-underline transition-colors
+    duration-200 hover:bg-surface-a30
+    2xl:h-72 2xl:grid-cols-2"
+    >
+        <!-- Image div -->
+        <div class="col-span-2 col-start-1 row-start-1">
             <div
-                class="hidden 2xl:block absolute bg-gradient-to-t from-zinc-900 w-full h-full opacity-90 z-10 transition group-hover:translate-y-16"
-            />
-            
-            <!-- Hover gradient -->
-            <div
-                class="hidden 2xl:block absolute bg-transparent w-full h-full transtition duration-200 opacity-85 z-10 group-hover:bg-zinc-900 group-active:opacity-50"
-            />
+                class="
+        relative h-40 w-full overflow-hidden
+        2xl:h-full
+        "
+            >
+                <!-- Gradient -->
+                <div
+                    class="
+                absolute z-10 block h-full w-full
+                bg-linear-to-t from-surface-a10 via-transparent
+                transition duration-200
+                group-hover:from-surface-a30 2xl:from-surface-a0
+                2xl:via-surface-a0/50 2xl:opacity-90
+                2xl:group-hover:translate-y-16
+                2xl:group-hover:from-surface-a0
+                "
+                ></div>
 
-            <!-- Image -->
-            <img
-                {src}
-                alt=""
-                class="absolute inset-0 z-0 w-full h-full object-cover
-                transition scale-110 group-hover:scale-125 group-active:scale-100"
-            />
+                <!-- Hover gradient -->
+                <div
+                    class="transtition absolute z-10 block h-full w-full
+                bg-transparent opacity-85
+                duration-200 group-active:opacity-50
+                2xl:group-hover:bg-surface-a0
+                "
+                ></div>
+
+                <!-- Image -->
+                <img
+                    {src}
+                    alt=""
+                    class="absolute inset-0 z-0 w-full scale-110
+                object-cover transition group-hover:scale-125 group-active:scale-100"
+                />
+            </div>
         </div>
-    </div>
-    <!-- Title -->
-    <div
-        class="row-start-2 col-start-1 z-20 m-4 pb-2 border-b-2 border-primary border-opacity-50 2xl:row-start-1 2xl:border-0 2xl:place-self-end 2xl:justify-self-start 2xl:sizing 2xl:absolute 2xl:w-1/2"
-    >
-        <h2 class="font-bold text-3xl text-secondary 2xl:group-hover:text-4xl transtition duration-200">{title}</h2>
-        <p class="text-sm 2xl:group-hover:text-lg transtition duration-200">{summary}</p>
-    </div>
+        <!-- Title -->
+        <div
+            class="
+        2xl:sizing
+        border-primary
+        border-opacity-50 z-20 col-start-1 row-start-2 m-4
+        pb-2 2xl:absolute 2xl:w-1/2 2xl:place-self-end 2xl:justify-self-start
+        "
+        >
+            <h2
+                class="
+                text-light-a10 2xl:group-hover:text-light-a0/90
+                transtition text-3xl font-bold duration-200
+                2xl:group-hover:text-4xl"
+            >
+                {title}
+            </h2>
+            <p class="transtition text-sm duration-200 2xl:group-hover:text-lg">{summary}</p>
+        </div>
 
-    <!-- Text -->
-    <div
-        class="z-20 row-start-3 col-start-1 m-4 mt-0 2xl:row-start-1 2xl:col-start-2 2xl:flex items-center 
-        transition 2xl:opacity-0 2xl:translate-x-10 2xl:group-hover:translate-x-0 2xl:group-hover:opacity-100"
-    >
-        <div class="z-20">
-            <p class="my-2">{text}</p>
-            <ul>
-                {#each tasks as task}
-                    <li class="flex flex-row gap-2">
-                        <div>
-                            <Icon
-                                class="text-highlight"
-                                style="display:inline"
-                                icon="mdi:checkbox-marked-circle-outline"
-                                inline={true}
-                            />
+        <!-- Text -->
+        <div
+            class="
+        z-20 col-start-1 row-start-3 m-4 mt-0 items-center transition
+        2xl:col-start-2 2xl:row-start-1 2xl:flex
+        2xl:translate-x-10 2xl:opacity-0
+        2xl:group-hover:translate-x-0 2xl:group-hover:opacity-100
+        "
+        >
+            <div class="z-20">
+                <p class="my-2">{text}</p>
+                <ul>
+                    {#each tasks as task (task)}
+                        <li class="flex flex-row gap-2">
+                            <div>
+                                <Icon
+                                    class="text-highlight"
+                                    style="display:inline"
+                                    icon="mdi:checkbox-marked-circle-outline"
+                                    inline={true}
+                                />
                             </div>
                             <p>{task}</p>
-                    </li>
-                {/each}
-            </ul>
+                        </li>
+                    {/each}
+                </ul>
+            </div>
         </div>
-    </div>
-</a>
+    </a>
+</div>
