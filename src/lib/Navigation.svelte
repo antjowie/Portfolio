@@ -20,6 +20,20 @@
     let aboutElem = $state<HTMLElement | null>(null);
     let currentElem = $state("");
 
+    let autoHide = true;
+    let timer = -1;
+
+    function pauseAutoHide() {
+        autoHide = false;
+        navVisible = true;
+        if (timer > 0) clearTimeout(timer);
+
+        timer = window.setTimeout(() => {
+            autoHide = true;
+            timer = -1;
+        }, 1000);
+    }
+
     function onScroll() {
         // If on large screen, check if we are in hero section
         scrollPos = window.scrollY;
@@ -33,17 +47,16 @@
             lastScrollPos = scrollPos;
             let hasScrolledUp = delta < 0;
 
-            navVisible = hasScrolledUp;
+            navVisible = hasScrolledUp || !autoHide;
+
             sideNavVisible = false;
         }
 
         if (aboutElem && experiencesElem && workElem) {
-            console.log(aboutElem.getBoundingClientRect().top);
-            console.log(currentElem);
-            if (aboutElem.getBoundingClientRect().top < windowHeight / 4) currentElem = "about";
-            else if (experiencesElem.getBoundingClientRect().top < windowHeight / 4)
+            if (aboutElem.getBoundingClientRect().top < windowHeight / 2) currentElem = "about";
+            else if (experiencesElem.getBoundingClientRect().top < windowHeight / 2)
                 currentElem = "experiences";
-            else if (workElem.getBoundingClientRect().top < windowHeight / 4) currentElem = "work";
+            else if (workElem.getBoundingClientRect().top < windowHeight / 2) currentElem = "work";
             else currentElem = "";
         }
     }
@@ -68,6 +81,36 @@
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} onscroll={onScroll} />
 
+{#snippet items()}
+    <li>
+        <a
+            onclick={pauseAutoHide}
+            class="hover-line {currentElem === 'work'
+                ? 'text-light-a0'
+                : 'text-light-a10'} hover:text-primary-a50 transition"
+            href="#work">Work</a
+        >
+    </li>
+    <li>
+        <a
+            onclick={pauseAutoHide}
+            class="hover-line {currentElem === 'experiences'
+                ? 'text-light-a0'
+                : 'text-light-a10'} hover:text-primary-a50 transition"
+            href="#experiences">Experiences</a
+        >
+    </li>
+    <li>
+        <a
+            onclick={pauseAutoHide}
+            class="hover-line {currentElem === 'about'
+                ? 'text-light-a0'
+                : 'text-light-a10'} hover:text-primary-a50 transition"
+            href="#about">About me</a
+        >
+    </li>
+{/snippet}
+
 <!-- Topbar -->
 <nav
     class="fixed -top-12 right-0 z-40 w-screen bg-surface-a10/75 transition"
@@ -75,22 +118,7 @@
 >
     <!-- Top nav part -->
     <ul class="flex h-12 items-center justify-end space-x-2 pr-2 uw:pr-96 xl:space-x-8 xl:pr-16">
-        <li>
-            <a class="hover-line text-light-a10 hover:text-primary-a50 transition" href="#work"
-                >Work</a
-            >
-        </li>
-        <li>
-            <a
-                class="hover-line text-light-a10 hover:text-primary-a50 transition"
-                href="#experiences">Experiences</a
-            >
-        </li>
-        <li>
-            <a class="hover-line text-light-a10 hover:text-primary-a50 transition" href="#about"
-                >About me</a
-            >
-        </li>
+        {@render items()}
     </ul>
 </nav>
 
@@ -103,30 +131,7 @@
     >
         <!-- Top nav part -->
         <ul class="items-starts m-auto mx-16 mt-16 flex flex-col space-y-4 text-lg tracking-wider">
-            <li>
-                <a
-                    class="hover-line {currentElem === 'work'
-                        ? 'text-light-a0'
-                        : 'text-light-a10'} hover:text-primary-a50 transition"
-                    href="#work">Work</a
-                >
-            </li>
-            <li>
-                <a
-                    class="hover-line {currentElem === 'experiences'
-                        ? 'text-light-a0'
-                        : 'text-light-a10'} hover:text-primary-a50 transition"
-                    href="#experiences">Experiences</a
-                >
-            </li>
-            <li>
-                <a
-                    class="hover-line {currentElem === 'about'
-                        ? 'text-light-a0'
-                        : 'text-light-a10'} hover:text-primary-a50 transition"
-                    href="#about">About me</a
-                >
-            </li>
+            {@render items()}
         </ul>
     </nav>
 {:else if desktopView}
